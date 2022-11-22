@@ -18,7 +18,7 @@
       "value": "Azure_test_infra"
     },
     "virtualMachineSize": {
-      "value":
+      "value": "Standard_B1s"
     },
      "subnetName": {
        "value": "default"
