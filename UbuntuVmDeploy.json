@@ -226,7 +226,7 @@
             "sku": "[parameters('ubuntuOSVersion')]",
             "version": "latest"
           }
-        },,
+        },
         "networkProfile": {
           "networkInterfaces": [
             {
