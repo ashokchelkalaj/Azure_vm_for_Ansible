@@ -113,10 +113,10 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'ssarhelmj')]",
-    "publicIPAddressName": "[concat(uniqueString(resourceGroup().id),'IPvmj')]",
+    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'ssarhelmjy')]",
+    "publicIPAddressName": "[concat(uniqueString(resourceGroup().id),'IPvmjy')]",
     "vmName": "[parameters('vmName')]",
-    "nicName": "[concat(parameters('vmName'),'Nicnmj')]",
+    "nicName": "[concat(parameters('vmName'),'Nicnmjy')]",
    
  
     "vnetId": {
@@ -201,41 +201,32 @@
     },
     {
       "type": "Microsoft.Compute/virtualMachines",
-      "apiVersion": "2015-06-15",
-      "name": "[variables('vmName')]",
+      "apiVersion": "2021-11-01",
+      "name": "[parameters('vmName')]",
       "location": "[parameters('location')]",
       "dependsOn": [
         "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
         "[resourceId('Microsoft.Network/networkInterfaces/', variables('nicName'))]"
       ],
+
       "properties": {
         "hardwareProfile": {
           "vmSize": "[parameters('vmSize')]"
         },
-        "osProfile": {
-          "computerName": "[variables('vmName')]",
-          "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"
-          
-        },
         "storageProfile": {
+          "osDisk": {
+            "createOption": "FromImage",
+            "managedDisk": {
+              "storageAccountType": "Standard_LRS"
+            }
+          },
           "imageReference": {
             "publisher": "Canonical",
             "offer": "UbuntuServer",
             "sku": "[parameters('ubuntuOSVersion')]",
             "version": "latest"
-          },
-          "osDisk": {
-            "createOption": "FromImage"
-          },
-          "dataDisks": [
-            {
-              "diskSizeGB": 1023,
-              "lun": 0,
-              "createOption": "Empty"
-            }
-          ]
-        },
+          }
+        },,
         "networkProfile": {
           "networkInterfaces": [
             {
