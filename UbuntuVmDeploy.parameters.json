@@ -9,9 +9,9 @@
       "value": "ansible"
     },
     "vmName": {
-      "value": "Ansibleinfravmubuntu"
+      "value": "Ansibletestvmubuntu"
     },
-    "adminPassword": {
+    "adminPasswordOrKey": {
       "value": "Ansible@12345"
     },
     "virtualNetworkName": {
