@@ -113,10 +113,10 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'ssarhelvm')]",
-    "publicIPAddressName": "[concat(uniqueString(resourceGroup().id),'IPvm')]",
+    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'ssarhelvmm')]",
+    "publicIPAddressName": "[concat(uniqueString(resourceGroup().id),'IPvmm')]",
     "vmName": "[parameters('vmName')]",
-    "nicName": "[concat(parameters('vmName'),'Nicnm')]",
+    "nicName": "[concat(parameters('vmName'),'Nicnmm')]",
    
  
     "vnetId": {
@@ -210,7 +210,7 @@
       ],
       "properties": {
         "hardwareProfile": {
-          "vmSize": "[parameters('virtualMachineSize')]"
+          "vmSize": "[parameters('vmSize')]"
         },
         "osProfile": {
           "computerName": "[variables('vmName')]",
