@@ -126,7 +126,7 @@
             "keyData": "[parameters('adminPassword')]"
           }
         ]
-      }
+      },
     "vnetId": {
       "new": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
       "existing": "[resourceId(parameters('virtualNetworkResourceGroup'),'Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]"
@@ -135,7 +135,7 @@
     "publicIPAddressType": "Dynamic"
   },
   "resources": [
-   # {
+        # {
     # "type": "Microsoft.Network/virtualNetworks",
      # "apiVersion": "2021-02-01",
       #"name": "[parameters('virtualNetworkName')]",
@@ -156,7 +156,6 @@
         #]
       #}
     #},
-
 
     {
       "type": "Microsoft.Network/publicIPAddresses",
@@ -187,7 +186,7 @@
             }
           }
         ],
-        "enableIPForwarding": true
+        "enableIPForwarding": true,
         "networkSecurityGroup": {
           "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
         }
@@ -250,7 +249,7 @@
         "osProfile": {
           "computerName": "[variables('vmName')]",
           "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"
+          "adminPassword": "[parameters('adminPassword')]",
           "linuxConfiguration": "[if(equals(parameters('authenticationType'), 'password'), null(), variables('linuxConfiguration'))]"
         },
         "storageProfile": {
@@ -287,4 +286,5 @@
       }
     }
   ]
+}
 }
