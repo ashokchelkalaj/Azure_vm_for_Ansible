@@ -9,7 +9,7 @@
       "value": "ansible"
     },
     "vmName": {
-      "value": "Ansible_infra_vm"
+      "value": "Ansibleinfravm"
     },
     "adminPassword": {
       "value": "Ansible@12345"
