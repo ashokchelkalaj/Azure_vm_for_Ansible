@@ -135,28 +135,6 @@
     "publicIPAddressType": "Dynamic"
   },
   "resources": [
-        # {
-    # "type": "Microsoft.Network/virtualNetworks",
-     # "apiVersion": "2021-02-01",
-      #"name": "[parameters('virtualNetworkName')]",
-      #"location": "[parameters('location')]",
-      #"properties": {
-       # "addressSpace": {
-        #  "addressPrefixes": [
-         #   "[parameters('virtualNetworkAddressPrefix')]"
-          #]
-        #},
-        #"subnets": [
-         # {
-          #  "name": "[parameters('subnetName')]",
-           # "properties": {
-            #  "addressPrefix": "[parameters('subnetAddressPrefix')]"
-            #}
-          #}
-        #]
-      #}
-    #},
-
     {
       "type": "Microsoft.Network/publicIPAddresses",
       "name": "[variables('publicIPAddressName')]",
