@@ -142,8 +142,8 @@
             "new": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
             "existing": "441dd992-795f-4ce4-9858-6bc5604a25c3"
     },
-    "subnetId": "[concat(variables('vnetId')[parameters('virtualNetworkNewOrExisting')],'/subnets/',parameters('subnetName'))]",
-    "publicIPAddressType": "Dynamic"
+         "subnetId": "[concat(variables('vnetId')[parameters('virtualNetworkNewOrExisting')],'/subnets/',parameters('subnetName'))]",
+          "publicIPAddressType": "Dynamic"
      
     },
     "resources": [
@@ -158,7 +158,7 @@
                         "name": "ipconfig1",
                         "properties": {
                             "subnet": {
-                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetName'))]"
+                                "id": "[concat(variables('vnetId')[parameters('virtualNetworkNewOrExisting')],'/subnets/',parameters('subnetName'))]"
                             },
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIPAddress": {
