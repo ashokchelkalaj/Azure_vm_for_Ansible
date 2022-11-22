@@ -142,9 +142,9 @@
       "location": "[parameters('location')]",
       "properties": {
         "publicIPAllocationMethod": "[variables('publicIPAddressType')]"
-      
+      }
     },
-    {
+     {
       "type": "Microsoft.Network/networkInterfaces",
       "name": "[variables('nicName')]",
       "apiVersion": "2021-05-01",
@@ -163,18 +163,20 @@
               }
             }
           }
-        ],
+        ]
+      },
         "enableIPForwarding": true,
         "networkSecurityGroup": {
           "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
         }
       },
-      "dependsOn": [
+        "dependsOn": [
         
         "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]",
         "[concat('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'))]",
         "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]"
       ]
+      
     },
     {
       "type": "Microsoft.Network/networkSecurityGroups",
