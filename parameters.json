@@ -20,6 +20,9 @@
     "virtualNetworkNewOrExisting": {
       "value": "Existing"
     },
+    "virtualNetworkAddressPrefix": {
+      "value": "10.2.0.0/16"
+    },
     "virtualNetworkResourceGroup": {
       "value": "Azure_test_infra"
     },
@@ -28,6 +31,9 @@
     },
      "subnetName": {
        "value": "default"
-     }
+     },
+        "subnetAddressPrefix": {
+      "value": "10.2.0.0/24
+    }
   }
 }      
