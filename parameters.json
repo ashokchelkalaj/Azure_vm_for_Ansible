@@ -33,7 +33,7 @@
        "value": "default"
      },
         "subnetAddressPrefix": {
-      "value": "10.2.0.0/24
+      "value": "10.2.0.0/24"
     }
   }
 }      
