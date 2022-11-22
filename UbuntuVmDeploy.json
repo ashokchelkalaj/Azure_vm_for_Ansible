@@ -234,6 +234,18 @@
             }
           ]
         },
+        "osProfile": {
+          "computerName": "[parameters('vmName')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "adminPassword": "[parameters('adminPassword')]"
+          
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/networkInterfaces',variables('nicName'))]"
+        ]
+    },
+        
         "diagnosticsProfile": {
           "bootDiagnostics": {
             "enabled": true,
