@@ -164,11 +164,11 @@
             }
           }
         ]
-      },
+      
         "enableIPForwarding": true,
         "networkSecurityGroup": {
           "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]"
-        }
+        },
       
         "dependsOn": [
         
