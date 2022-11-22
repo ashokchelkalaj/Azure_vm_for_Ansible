@@ -75,7 +75,7 @@
         },
         "virtualNetworkName": {
             "type": "string",
-                "defaultValue": "vNet",
+                "defaultValue": "Ansible_Vnet",
                     "metadata": {
                 "description": "Name of the VNET"
             }
@@ -139,12 +139,12 @@
             }
         },
          "vnetId": {
-      "new": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
-      "existing": "[resourceId(parameters('virtualNetworkResourceGroup'),'Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]"
+            "new": "[resourceId('Microsoft.Network/virtualNetworks',parameters('virtualNetworkName'))]",
+            "existing": "441dd992-795f-4ce4-9858-6bc5604a25c3"
     },
     "subnetId": "[concat(variables('vnetId')[parameters('virtualNetworkNewOrExisting')],'/subnets/',parameters('subnetName'))]",
     "publicIPAddressType": "Dynamic"
-     }
+     
     },
     "resources": [
         {
