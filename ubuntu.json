@@ -144,6 +144,7 @@
     },
     "subnetId": "[concat(variables('vnetId')[parameters('virtualNetworkNewOrExisting')],'/subnets/',parameters('subnetName'))]",
     "publicIPAddressType": "Dynamic"
+     }
     },
     "resources": [
         {
