@@ -74,6 +74,15 @@
         "description": "The size of the VM"
       }
     },
+    
+    "networkSecurityGroupName": {
+      "type": "string",
+       "metadata": {
+        "description": "nsg"
+       }
+    },
+      
+    
     "subnetName": {
       "type": "string",
       "metadata": {
