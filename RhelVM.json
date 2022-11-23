@@ -101,10 +101,10 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'jssarhelmjy')]",
-    "publicIPAddressName": "[concat(uniqueString(resourceGroup().id),'IPjvmjy')]",
+    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'RhelVM')]",
+    "publicIPAddressName": "[concat(uniqueString(resourceGroup().id),'RhelIP')]",
     "vmName": "[parameters('vmName')]",
-    "nicName": "[concat(parameters('vmName'),'Nicjnmjy')]",
+    "nicName": "[concat(parameters('vmName'),'NicRhel')]",
    
  
     "vnetId": {
