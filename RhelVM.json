@@ -226,7 +226,7 @@
       ],
       "properties": {
         "hardwareProfile": {
-          "vmSize": "[parameters('vmSize')]"
+          "virtualMachineSize": "[parameters('virtualMachineSize')]"
         },
         "osProfile": {
           "computerName": "[parameters('vmName')]",
