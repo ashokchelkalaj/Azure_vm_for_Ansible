@@ -96,7 +96,7 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
+    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'WindowsVM')]",
     "publicIPAddressName": "[concat(uniqueString(resourceGroup().id),'IP')]",
     "vmName": "[parameters('vmName')]",
     "nicName": "[concat(parameters('vmName'),'Nic')]",
@@ -166,6 +166,32 @@
         "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]"
       ]
     },
+    {
+      "comments": "Default Network Security Group for template",
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "apiVersion": "2020-05-01",
+      "name": "[parameters('networkSecurityGroupName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "default-allow-22",
+            "properties": {
+              "priority": 1000,
+              "access": "Allow",
+              "direction": "Inbound",
+              "destinationPortRange": "22-50000",
+              "protocol": "Tcp",
+              "sourceAddressPrefix": "*",
+              "sourcePortRange": "*",
+              "destinationAddressPrefix": "*"
+            }
+          }
+        ]
+      }
+    },
+    
+    
     {
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2021-04-01",
