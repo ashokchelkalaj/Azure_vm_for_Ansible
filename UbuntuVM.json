@@ -77,7 +77,7 @@
         "description": "Resource group of the VNet"
       }
     },
-    "virtualMachineSize": {
+    "vmSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the VM"
