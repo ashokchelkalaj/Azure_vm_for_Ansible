@@ -213,6 +213,11 @@
         "hardwareProfile": {
           "vmSize": "[parameters('vmSize')]"
         },
+        "osProfile": {
+          "computerName": "[variables('vmName')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "adminPassword": "[parameters('adminPassword')]"
+        },
         "storageProfile": {
           "osDisk": {
             "createOption": "FromImage",
@@ -234,18 +239,9 @@
             }
           ]
         },
-        "osProfile": {
-          "computerName": "[parameters('vmName')]",
-          "adminUsername": "[parameters('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"
-          
-        }
-      },
       "dependsOn": [
         "[resourceId('Microsoft.Network/networkInterfaces',variables('nicName'))]"
-        ]
-      }
-    ],
+        ],
         
         "diagnosticsProfile": {
           "bootDiagnostics": {
