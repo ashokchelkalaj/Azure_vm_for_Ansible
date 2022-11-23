@@ -65,7 +65,7 @@
         "description": "Resource group of the VNet"
       }
     },
-    "virtualMachineSize": {
+    "vmSize": {
       "type": "string",
       "metadata": {
         "description": "The size of the VM"
@@ -226,7 +226,7 @@
       ],
       "properties": {
         "hardwareProfile": {
-          "virtualMachineSize": "[parameters('virtualMachineSize')]"
+          "vmSize": "[parameters('vmSize')]"
         },
         "osProfile": {
           "computerName": "[parameters('vmName')]",
