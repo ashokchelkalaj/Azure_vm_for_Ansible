@@ -113,7 +113,7 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'UbuntuVMs')]",
+    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'ubuntuvms')]",
     "publicIPAddressName": "[concat(uniqueString(resourceGroup().id),'UbuntuVMIP')]",
     "vmName": "[parameters('vmName')]",
     "nicName": "[concat(parameters('vmName'),'NicUbuntuVM')]",
