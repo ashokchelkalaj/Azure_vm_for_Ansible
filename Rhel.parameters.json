@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "centralindia"
+    },
+    "adminUsername": {
+      "value": "ansible"
+    },
+    "vmName": {
+      "value": "RhelAnsibleNode"
+    },
+    "adminPassword": {
+      "value": "Ansible@12345"
+    },
+    "virtualNetworkName": {
+      "value": "Ansible_Vnet"
+    },
+    "virtualNetworkNewOrExisting": {
+      "value": "Existing"
+    },
+    "virtualNetworkAddressPrefix": {
+      "value": "10.2.0.0/16"
+    },
+    "virtualNetworkResourceGroup": {
+      "value": "Azure_test_infra"
+    },
+    "vmSize": {
+      "value": "Standard_B1s"
+    },
+     "subnetName": {
+       "value": "default"
+     },
+        "subnetAddressPrefix": {
+      "value": "10.2.0.0/24"
+    },
+    "networkSecurityGroupName": {
+      "value": "RhelNsg"
+    }
+  }
+}    
