@@ -105,7 +105,7 @@
     }
   },
   "variables": {
-    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'windows')]",
+    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'win')]",
     "publicIPAddressName": "[concat(uniqueString(resourceGroup().id),'IP')]",
     "vmName": "[parameters('vmName')]",
     "nicName": "[concat(parameters('vmName'),'Nic')]",
