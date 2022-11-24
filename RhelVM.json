@@ -241,7 +241,7 @@
           "imageReference": {
             "publisher": "RedHat",
             "offer": "RHEL",
-            "sku": "9.0",
+            "sku": "82gen2",
             "version": "latest"
           },
           "dataDisks": [
