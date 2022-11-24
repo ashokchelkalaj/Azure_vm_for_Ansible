@@ -158,7 +158,7 @@
       "properties": {
         "ipConfigurations": [
           {
-            "name": "ipconfig2",
+            "name": "ipconfig1",
             "properties": {
               "privateIPAllocationMethod": "Dynamic",
               "publicIPAddress": {
